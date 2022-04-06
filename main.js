@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require('electron');
 const isDev = require('electron-is-dev');
 
 let mainWindow;
- 
+
 app.on('ready', () => {
     // require('@electron/remote/main').initialize();
     mainWindow = new BrowserWindow({
@@ -14,7 +14,7 @@ app.on('ready', () => {
             enableRemoteModule: true
         }
     });
-    const urlLocation = isDev ? 'http://localhost:3000' : 'product';
+    const urlLocation = isDev ? 'http://localhost:3333' : 'product';
     //require('@electron/remote/main').enable(mainWindow.webContents);
     mainWindow.loadURL(urlLocation);
     // mainWindow.webContents.openDevTools();
